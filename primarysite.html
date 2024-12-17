@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- heading -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <header>
+        <a class="name">simon alam</a>
+      <nav>
+        <a href="#about">about</a>
+        <a href="#work">work</a>
+        <a href="#education">education</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+    
+    <main>
+
+        <section id="about" class="box">
+            <div class="about-text">
+              <h1>about me</h1>
+              <p>Hello there! I am a graduate student studying Computer and Information Technology at the University of Pennsylvania. Prior to starting at UPenn,
+                I was a Cybersecurity Graduate Scholar at the Lawrence Livermore National Laboratory where I generated insights from climate data 
+                in ways that promoted national security efforts.
+              </p>
+              <p>I am seeking full-time entry-level software engineering positions.</p>
+              <a href="Resume_ - Copy.pdf" download class="download-btn">Download My Resume</a>
+            </div>
+            <figure>
+                <img src="angel.jpg" height="350" width="300" alt="About Me">
+                <figcaption>My Keedy-jaan and I. Rest well, angel.</figcaption>
+            </figure>
+    
+
+          </section>
+          
+      <!-- Add other sections like Portfolio, Blog, Contact -->
+      <section id="work" class="box">
+        <h1>work</h1>
+    
+        <div class="image-container">
+            <div class="image-item">
+                <img src="download.png" width="400" alt="Image 1">
+                <div class="info-box">
+                    <h3>Cybersecurity Graduate Scholar</h3>
+                    <p> In this position, I implemented Python-based API scripts integration to efficiently download and manage large (24+ GB) netCDF
+                        files of climate data, automating data collection and preprocessing for climate analysis. Additionally, I used Xarray and Cartopy 
+                        Python libraries on a computing cluster to preprocess and visualize ERA5 climate datasets, optimizing workflows to visualize temperature anomalies for regional analysis.
+                    </p>
+                    <p> I worked with key stakeholders, including the Department of Defense, to support a framework that integrates
+                        climate risk insights into national security planning, therefore enabling proactive measures.</p>
+                </div>
+            </div>
+            
+            <div class="image-item">
+                <img src="smallerdow.png" width="400" alt="Image 2">
+                <div class="info-box">
+                    <h3>Data Science Intern</h3>
+                    <p> At Defenders of Wildlife's Center for Conservation Innovation, I used Google Earth Engine (JavaScript) to extract geospatial features, generating GeoJSON and .tif datasets for
+                        multiple counties to train predictive models.
+                        This experience gave me hands-on experience with Azure to run and fine-tune Microsoft Land Cover AI models and validating results against the National Land
+                        Cover Database using confusion matrices for accuracy assessment.</p>
+                    <p>I also supported automating data workflows and streamlining model processes with Python scripts in Vim, increasing efficiency and
+                        promoting preemptive decision-making for key stakeholders on land-use change.</p>
+                </div>
+            </div>
+            
+            <div class="image-item">
+                <img src="cpl.webp" width="400" alt="Image 3">
+                <div class="info-box">
+                    <h3>Data & Policy Analyst Intern</h3>
+                    <p> In this position, I analyzed open-source police incident reports, conducting time-series analysis to evaluate crime trends before and
+                        after the pandemic using Python in a virtualized environment. I learned how to use Geopandas and Shapely to process and visualize geographic data from JSON and .shp files, creating crime
+                        maps for spatial analysis.</p>
+                    <p>I synthesized my findings into a memorandum and presentation, reporting a 15% increase in motor vehicle thefts and a
+                        31% increase in burglaries from March 2019 to March 2020.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+       <section id="education" class="box">
+        <h1>education</h1>
+        <div class="image2-item">
+        <img src="UPenn.png" width="400" alt="Image 4">
+        <h3>Master of Computer and Information Technology (MCIT)</h3>
+        <p>I began MCIT in Spring 2023. I have taken coursework including data structures & algorithms, software design in Java, operating systems,
+            computer & network security, and systems programming. I also work as a teaching assistant for our Systems Programming in C course.
+        <p>
+        </div>
+        <div class="image2-item">
+        <img src="Berkeley.png" width="400" alt="Image 5">
+        <h3>Bachelor of Arts in Political Science (Graduated Spring 2022)</h3>
+        <p>I graduated with High Honors from Berkeley with American Politics as my concentration. I also was an active researcher in several groups such
+            as the Coleman Fung Institute for Engineering Leadership, Data Scholars, and the Undergraduate Apprentice Research Program.
+        </p>
+    </div>
+       </section>
+    </main>
+    <footer>
+        <section id="contact">
+      <p>Contact Info</p>
+      <a href= "mailto:alasimon@seas.upenn.edu">alasimon@seas.upenn.edu</a>
+      <p>Connect with me on LinkedIn:</p>
+  <a href="https://www.linkedin.com/in/simon-alam-693005178/" target="_blank">
+    <i class="fab fa-linkedin"></i> Simon Alam
+  </a>
+      
+    </section>
+    </footer>
+   
+    <script>
+        window.onload = function() {
+        const imageItems = document.querySelectorAll('.image-item');
+        
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            return rect.top >= 0 && rect.top <= windowHeight;
+        }
+
+        // Function to trigger fade-in effect
+        function handleScroll() {
+            imageItems.forEach(item => {
+            const img = item.querySelector('img');
+            const infoBox = item.querySelector('.info-box');
+            
+            // Check if the image and the info box are in the viewport
+            if (isInViewport(img)) {
+                img.classList.add('visible');  // Show the image
+            } else {
+                img.classList.remove('visible'); // Reset if image goes out of the viewport
+            }
+
+            if (isInViewport(infoBox)) {
+                infoBox.classList.add('visible');  // Show the info box
+            } else {
+                infoBox.classList.remove('visible'); // Reset if info box goes out of the viewport
+            }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Trigger the scroll function once when the page loads to show any initially visible elements
+        handleScroll();
+        };
+      </script>
+
+  </body>
+</html>
