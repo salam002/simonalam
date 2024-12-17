@@ -157,11 +157,29 @@ figcaption {
 /* Education Section */
 .education-imagecontainer {
   display: grid;
-  justify-content: space-around;
+  justify-content: center; /* Center images in grid */
   gap: 20px;
   flex-wrap: nowrap;
+  width: 100%; /* Ensure container takes full width */
+  max-width: 100%; /* Prevent image container from exceeding the screen width */
 }
 
+.education-imagecontainer img {
+  width: 100%; /* Ensure images fill their container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+.image2-item {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust this as necessary, or remove if you want images to span full width */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Image visibility on scroll */
 .education-imagecontainer img, .image2-item .info-box {
   opacity: 0;
   transform: translateY(20px);
@@ -179,6 +197,27 @@ figcaption {
   max-width: 400px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.info-box {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Image item hover */
+.image2-item:hover .info-box {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-container img.loaded {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* Footer Styling */
