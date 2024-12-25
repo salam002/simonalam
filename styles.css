@@ -138,10 +138,10 @@ figcaption {
   margin: 20px auto;
 }
 
-.image-item:hover .info-box {
+/* .image-item:hover .info-box {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 .image-container img.loaded {
   opacity: 1;
@@ -208,11 +208,11 @@ figcaption {
   visibility: visible;
 }
 
-.image-container img.loaded {
+/* .image-container img.loaded {
   opacity: 1;
   transform: scale(1);
 }
-
+ */
 
 footer {
   background-color: #333;
@@ -235,6 +235,44 @@ footer #contact p {
   margin: 5px 0;
 }
 
+.social-btn {
+  display: inline-block;
+  width: 50px; 
+  height: 50px; 
+  background-color: #333; 
+  color: white;
+  text-align: center;
+  line-height: 55px; 
+  border-radius: 50%; 
+  margin: 0 10px; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background-color: #0077b5; 
+  transform: scale(1.1);
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+}
+
+.linkedin-btn:hover {
+  background-color: #005f8a; 
+}
+
+.github-btn {
+  background-color: #333; 
+}
+
+.github-btn:hover {
+  background-color: #24292f;
+}
+
+.social-btn i {
+  font-size: 1.5em;
+}
 
 @media only screen and (max-width: 768px) {
   
